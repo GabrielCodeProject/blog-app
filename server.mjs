@@ -1,4 +1,4 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // API routes
-app.get('/api', (req: Request, res: Response) => {
+app.get('/api', (req, res) => {
     res.json({ message: 'API is working!' });
 });
 
